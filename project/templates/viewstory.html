@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %}VIEW STORY{% endblock %}
+{% block title %}View Story{% endblock %}
 
 {% block css %}
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/viewstory.css') }}">
@@ -15,20 +15,20 @@
            <div class = 'row' id = 'info'>
 <div class = "col-md-3">
               <div class="jumbotron jumbotron-img">
-            <img id = "post_img" src={{post.ArtURL}}>
+            <img class = img.thumbnail id = "post_img" width = '100%', height = '400px' src={{post.ArtURL}}>
 </div>
 </div>
-          <div class="col-md-9" id="description_block"> {{post.Text}}</div>
+          <div class="col-md-8" id="description_block"> {{post.Text}}</div>
 
 </div>
        <div class = 'row'>
       <span class = col-md-4><a  id = 'artist_link' href = "{{url_for('profile', username = user.username)}}">Art by @{{user.displayname}}</a></span>
 </div>
-    <hr color = '#000000'>
+    <p id = 'seperator'>_________________________________________________</p>
 
 <div class = 'row'>
   <div class = 'col-md-12'>
-      <h1>Artist Notes:</h1>
+      <p id = 'note_header'>ARTIST'S NOTE</>
       <p id = 'notes'>{{post.ArtistNotes}}</p>
        </div>
     </div>
