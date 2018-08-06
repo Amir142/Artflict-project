@@ -9,6 +9,7 @@
 {% block content %}
 <div class="post_block">
        <div class="valid_text_space" >
+    <div id="story_title"> {{post.Title}} </div><br><br> 
 <!--Checking if post has picture, which will cancel button-->
            {% if post.ArtURL != None %}
             <div id="story_title"> {{post.Title}} </div>

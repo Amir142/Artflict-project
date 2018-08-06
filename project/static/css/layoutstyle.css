@@ -44,8 +44,8 @@ body {
     background-color: #4CAF50;
 }
 
+
 .topnav {
-  overflow: hidden;
  
 }
 
@@ -77,14 +77,29 @@ body {
     max-width: 120%;
 }
 
+
 .content{
   margin-right: auto;
   margin-left: auto;
-  display: block;
-  width: 90%;
-  height: 100vh;
+  width: 89%;
+  height: auto;
   background-color: white;
+}
+
+.top_bar{
+  height: 28vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.content_main{
+  max-height: 69vh;
   overflow: auto;
+}
+
+.content_footer{
+  background-color: #00bbea ;
+  height: 4vh;
 }
 
 .topnav{
@@ -197,11 +212,6 @@ form.example::after {
   content: "";
   clear: both;
   display: table;
-}
-
-.logoblock{
-    height:100px;
-    text-align: center;
 }
 
 .pos{
