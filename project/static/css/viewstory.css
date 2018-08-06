@@ -2,6 +2,7 @@
 	font-size: 50px;
 	color:black;
 	font-family:  "Avenir", sans-serif;
+	margin: 20px;
 
 
 }
@@ -17,10 +18,22 @@
 
 .jumbotron-img{
 	max-width: 50%;
-	background-color: blue;
+	background-color: transparent;
+	padding :0;
+	padding-bottom: 0;
 }
 
 #notes{
 	color : black;
+	font-size: 25px;
 }
+#artist_link{
+	text-decoration: underline;
+	font-size: 25px;
+	color: black;
+}
+span{
+	display: inline-block;
+}
+
 

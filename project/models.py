@@ -98,7 +98,7 @@ class Post(db.Model):
 
 
 	def get_title(self):
-		return self.Title[:100] + "."
+		return self.Title[:100]
 
 
 
