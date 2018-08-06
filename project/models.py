@@ -2,7 +2,7 @@ from project import db
 from datetime import datetime
 
 from sqlalchemy import and_, or_
-from flask_login import UserMixin
+from flask_login import UserMixin, current_user
 from werkzeug.security import check_password_hash, generate_password_hash
 
 class User(UserMixin, db.Model):
@@ -58,9 +58,9 @@ class Post(db.Model):
 
 	def relate(self):
 		userid = current_user.id
-		getpostlike = Like.query.filter_by(postID = self.id).filter_by(UserID = userid).first()
+		getpostlike = Like.query.filter_by(postID = self.id).filter_by(userID = userid).first()
 		if getpostlike is None:
-			add_like = Like(userid. self.id)
+			add_like = Like(userid, self.id)
 			db.session.add(add_like)
 		else:
 			db.session.delete(getpostlike)
@@ -69,7 +69,7 @@ class Post(db.Model):
 		db.session.commit()
 
 	def get_rating(self):
-		getlikes = Like.query.filter(postID == self.id).all()
+		getlikes = Like.query.filter_by(postID = self.id).all()
 		self.Rating = len(getlikes)
 
 	def format_rating(self):
@@ -87,10 +87,20 @@ class Post(db.Model):
 
 	def format_date(self):
 		now = datetime.now()
-		return str(now.month) + " - " + str(now.day) + " - " + str(now.year)
+		month_dict = {1:'January', 2:'February', 3:'March', 4:'April', 5:'May', 6:'June', 7:'July',
+						8:'August', 9:'September', 10:'October', 11:'November', 12:'December'}
+		month = month_dict[now.month][:3]
+
+		day_suffix = {1:'st', 2:'nd'}
+		if now.day < 3:
+			day = str(now.day) + day_suffix[now.day]
+		else:
+			day = str(now.day) + 'th'
+
+		return month + " " + day + " " + str(now.year)
 
 	def get_description(self):
-		return self.Text[:200] + "..."
+		return self.Text[:700] + "..."
 
 
 	def __repr__(self):

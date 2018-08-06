@@ -41,6 +41,14 @@ def profile(username):
 		return abort(404)
 
 
+@app.route('/relate/<id>', methods=['POST'])
+@login_required
+def relate(id):
+	print(id)
+	post = Post.query.filter_by(id = id).first()
+	post.relate()
+	return "success"
+
 @app.route('/inspiration')
 @login_required
 def stories():

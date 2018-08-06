@@ -7,15 +7,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-     
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layoutstyle.css') }}">
       
       {% block head %}
       {% endblock %}
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
       <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
@@ -23,6 +24,7 @@
   <body style='background-image: url("{{ url_for('static', filename='pictures/Backgroundsite.jpg') }}");'>
 
 <div class="content">
+  <div class="top_bar">
     <div class="logoblock">
       <img src="{{ url_for('static', filename='pictures/logos/verticallog.png') }}" alt="verticallogo" id="navbarlogo" class="pos">
       <div class="searchblock pos">
@@ -39,23 +41,30 @@
    
     </div>
 
-        <div class="nav navbar-nav topnav navbar">
-        <a  href="{{url_for('feed')}}" class="navblock color-me">Home</a>
-        <a href="{{url_for('stories')}}" class="navblock">Stories</a>
-        <a href="#saved_artist" class="navblock" id="saved_artist">Saved Artist</a>
-        <a href="{{url_for('aboutus')}}" class="navblock">About</a>
-        <a href="{{ url_for('add_post.add_post') }}" class="navblock">Post</a>
-        <a href="{{ url_for('users.logout') }}" class="navblock">Log Out</a>
-      </div>
-      <div class="content_main">
-        {% block content %}
-        {% endblock %}
+    <div class="nav navbar-nav topnav navbar">
+      <a  href="{{url_for('feed')}}" class="navblock color-me">Home</a>
+      <a href="{{url_for('stories')}}" class="navblock">Stories</a>
+      <a href="#saved_artist" class="navblock" id="saved_artist">Saved Artist</a>
+      <a href="{{url_for('aboutus')}}" class="navblock">About</a>
+      <a href="{{ url_for('add_post.add_post') }}" class="navblock">Post</a>
+      <a href="{{ url_for('users.logout') }}" class="navblock">Log Out</a>
+    </div>
+  </div>
 
-      </div>
+  <div class="content_main">
+    {% block content %}
+    {% endblock %}
+
+  </div>
+
+  <div class="content_footer">
+    <span class="footer_text">all rights reserved to ArtFlict ltd. violators will be subjected to Nomnom's wrath.</span>
+  </div>
+
 </div>
   
 
   
     
-  </body>
+</body>
 </html>
