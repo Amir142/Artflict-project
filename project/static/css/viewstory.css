@@ -1,3 +1,7 @@
+.post_block{
+	padding-left: 25px;
+}
+
 #story_title{
 	font-size: 50px;
 	color:black;
@@ -17,10 +21,10 @@
 }
 
 .jumbotron-img{
-	max-width: 50%;
+	max-width: 80%;
 	background-color: transparent;
-	padding :0;
-	padding-bottom: 0;
+	padding-top :0px;
+
 }
 
 #notes{
@@ -29,11 +33,12 @@
 }
 #artist_link{
 	text-decoration: underline;
-	font-size: 25px;
+	font-size: 30px;
 	color: black;
 }
 span{
 	display: inline-block;
 }
+
 
 
