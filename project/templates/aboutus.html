@@ -2,57 +2,35 @@
 {% block title %}about us {% endblock %}
 
 {% block head %}
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/about.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/about.css') }}">
 {% endblock%}
 
 
 
 {% block content %}
-<!--	<img src="../static/pictures/nlogo.png" alt="Stickman" class="imag">-->
 
-<img src="{{ url_for('static', filename='pictures/nlogo.png') }}" alt="Stickman" class="imag" height="60" width="300">
+<img src="{{ url_for('static', filename='pictures/nlogo.png') }}" 
+  alt="Stickman" class="imag" height="60" width="300">
 	
 	
 <h1>About ArtFlict</h1><br>
 <br>
-<p>   Artflict is a rising startup company created by Y3 in MEET (Middle East Entrepreneurs Of Tomorrow). Our main </p>
-<p>   aim is to create a more compassionate and tolerate society where are is used more frequently for expression </p>
-<p>   and therapy. We are trying to help people suffering from the Palestinian- Israeli conflict in their daily lives </p>
-<p>   to express themselves in a friendly artistic way. We are an app in which people express their emotion and artist</p>
+<p>   Artflict is a rising startup company created by Y3 in MEET (Middle East 
+  Entrepreneurs Of Tomorrow). Our main </p>
+<p>   aim is to create a more compassionate and tolerate society where are is 
+  used more frequently for expression </p>
+<p>   and therapy. We are trying to help people suffering from the 
+  Palestinian- Israeli conflict in their daily lives </p>
+<p>   to express themselves in a friendly artistic way. We are an app in 
+  which people express their emotion and artist</p>
 <p>   empathize with their stories by creating related art</p>
- <img src="{{ url_for('static', filename='pictures/line3.png') }}" width="250" >
+<img src="{{ url_for('static', filename='pictures/line3.png') }}" width="250">
 
 <h1>Team</h1>
-<!--
-<header>Project meneger:</header>	
-  <div class="column">
-    <img src="{{ url_for('static', filename='pictures/siham.jpg') }}" alt="Snow" style="width:100%">
-    <p>Siham Abu Ali</p>
-  </div>
-  <div class="column">
-    <img src="{{ url_for('static', filename='pictures/ben.jpg') }}" alt="Forest" style="width:100%">
-    <p>Ben Levi</p>
-  
-  </div>
-
-<header>Developers:</header>
-<div class="column">
-    <img src="{{ url_for('static', filename='pictures/naomy.jpg') }}" alt="Snow" style="width:100%">
-    <p>NaomyLevy- Ashkenazy </p>
-  </div><br><br>
-  <div class="column">
-    <img src="{{ url_for('static', filename='pictures/may.jpeg') }}" alt="Forest" style="width:100%">
-    <p>May Raviel</p>
-  </div>
-  </div>
-  	
-</div>
--->
 
 <!-- Portfolio Gallery Grid -->
 
- <h1>Project maneger</h1>
+ <h1>Project managers</h1>
 <div class="row">
   <div class="column">
     <div class="content">

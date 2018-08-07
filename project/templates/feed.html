@@ -15,7 +15,7 @@
 
   {% for post in posts %}
 
-    <div class="artlessfeed post_template" id="post_no_{{post.id}}" onclick="view_story(this.id)">
+    <div class="artlessfeed post_template" id="post_no_{{post.id}}">
       <div class="artlessfeed post_title">
         {{ post.Title.upper() }}
       </div>
@@ -43,7 +43,7 @@
 
 {% for post in posts %}
 
-  <div class="mainfeed post_template" id="post_no_{{post.id}}" onclick="view_story(this.id)">
+  <div class="mainfeed post_template" id="post_no_{{post.id}}">
     <div class="mainfeed post_title">
       {{ post.Title.upper() }}
     </div>

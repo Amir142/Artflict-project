@@ -11,7 +11,9 @@
 	color: black;
 	width: 95%;
 	height: auto;
-	border-bottom: 1px solid;
+	border: 0;
+	box-shadow: -4px 6px 8px rgb(0,0,0,0.2);
+	transition: 0.3s;
 }
 
 .post_template:not(:first-child){
@@ -28,7 +30,7 @@
 
 .post_template:hover{
 	cursor: pointer;
-	background-color: #ededed;
+	box-shadow: -6px 9px 12px rgb(0,0,0,0.2);
 }
 
 .post_title{

@@ -59,16 +59,12 @@ class Post(db.Model):
 	def relate(self):
 		userid = current_user.id
 		getpostlike = Like.query.filter_by(postID = self.id).filter_by(userID = userid).first()
-		if getpostlike is None:
+		if getpostlike:
+			db.session.delete(getpostlike)
+		else:
 			add_like = Like(userid, self.id)
 			db.session.add(add_like)
-		else:
-			db.session.delete(getpostlike)
-
-		self.get_rating()
 		db.session.commit()
-
-	def get_rating(self):
 		getlikes = Like.query.filter_by(postID = self.id).all()
 		self.Rating = len(getlikes)
 
@@ -113,6 +109,9 @@ class Like(db.Model):
 		self.userID = userID
 		self.postID = postID
 
+	def __repr__(self):
+		return "like " + str(self.id) + " " + str(self.userID) + " " + str(self.postID)
+
 class Follower(db.Model):
 	__tablename__ = 'followers'
 	id             = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -122,3 +121,6 @@ class Follower(db.Model):
 	def __init__(self, followerID, followedID):
 		 self.followerID = followerID
 		 self.followedID = followedID
+
+	def __repr__(self):
+		return "like " + str(self.id) + " " + str(self.followerID) + " " + str(self.followedID)

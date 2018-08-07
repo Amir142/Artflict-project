@@ -56,7 +56,17 @@ def relate(id):
 	print(post.Rating)
 	post.relate()
 	print(post.Rating)
-	return "success"
+	return "successfully liked"
+
+@app.route('/isliked/<postid>', methods=['GET'])
+@login_required
+def is_liked(postid):
+	print("checking is liked for " + str(postid))
+	userid = current_user.id
+	getlike = Like.query.filter_by(userID = userid).filter_by(postID = postid).first()
+	if getlike:
+		return "yes"
+	return "no"
 
 @app.route('/inspiration')
 @login_required
@@ -80,10 +90,9 @@ def aboutus():
 @app.route('/stories/<int:post_id>', methods = ['GET','POST'])
 @login_required
 def list_detail_stories(post_id):
-	form = AddArtForm(request.form)    
 	post = Post.query.filter_by(id = post_id).first()
-	if (post.ArtURL != None):
+	if post.ArtURL:
 		artist = User.query.filter_by(id = post.ArtistID).first()
-		return render_template('viewstory.html', post=post, form=form, user = artist)
+		return render_template('viewstory.html', post=post, user = artist)
 	else:
-		return render_template('viewstory.html', post=post, form=form)
+		return render_template('viewstory.html', post=post)

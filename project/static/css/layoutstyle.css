@@ -103,7 +103,8 @@ body {
 
 .content_main{
   height: 69vh;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .content_footer{
