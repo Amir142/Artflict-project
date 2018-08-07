@@ -3,11 +3,8 @@
     height: 450px;
 }
 
-.add_post_container{
-  padding-top: 20px;
-  padding-left: 15px;
-}
 .text{
+  font-family:'Avenir LT W01 35 Light';
   	color: black;
 	  }
 
@@ -100,7 +97,8 @@
 
 .container{
 	margin-top: 10px;
-	margin-left: 10px;
+  padding-right: 30px;
+
 }
 
 .btn {
@@ -109,5 +107,10 @@
 }
 
 .user_interface{
-  padding-left: 45px;
+  padding-left: 20px;
+}
+
+.explain{
+  font-size: 25px;
+  font-weight: lighter;
 }
