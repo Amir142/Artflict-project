@@ -38,8 +38,7 @@ body  {
     background-image: url("{{ url_for('static', filename='pictures/Backgroundsite.jpg') }}");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-style: italic;
-    font-family: "Times New Roman", Times, serif;
+    font-family:'Avenir LT W01 35 Light';
     color: white;
       
       
@@ -57,7 +56,7 @@ body  {
                <img src="{{ url_for('static', filename='pictures/logos/verticallog.png') }}" alt="verticallogo" id="navbarlogo" class="pos">
             </div>
             <div class="col-5">
-          <div class="searchblock pos" style="width:100%">
+          <div class="searchblock pos" style="width:100%; "">
             <!-- The form -->
             <form class="example pos" action="action_page.php">
               <input type="text" placeholder="Search.." name="search">
@@ -72,7 +71,7 @@ body  {
 
 
 
-   <nav class="row navbar navbar-expand-lg navbar-light bg-light" style='clear:left; text-align:center'>
+   <nav class="row navbar navbar-expand-lg navbar-light bg-light" style='clear:left; text-align:center; font-size: 20px;'>
   <div class="col-3"><a class="nav-link" href="{{ url_for('feed') }}">HOME<span class="sr-only">(current)</span></a></div>
   <div class="col-3"><a class="nav-link nevblock" href="{{ url_for('stories') }}">STORIES</a></div>
   <div class="col-3">            <a class="nav-link nevblock" href="{{ url_for('add_post.add_post') }}">POST</a>
