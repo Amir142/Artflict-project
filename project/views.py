@@ -53,7 +53,9 @@ def profile(username):
 def relate(id):
 	print(id)
 	post = Post.query.filter_by(id = id).first()
+	print(post.Rating)
 	post.relate()
+	print(post.Rating)
 	return "success"
 
 @app.route('/inspiration')
@@ -64,7 +66,9 @@ def stories():
 
 @app.route('/')
 def landingpage():
-	return render_template('landingpage.html')    
+	if not current_user:
+		return render_template('landingpage.html')
+	return redirect(url_for('feed'))    
 		
 
 @app.route('/aboutus')

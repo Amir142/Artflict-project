@@ -7,6 +7,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%, 100vh;
+  overflow: hidden;
   
 }
  
@@ -16,7 +17,6 @@ body {
 }
 
 .profileform {
- border-radius: 15px;
  width: 500px;
  height: 600px;
  display: block;
@@ -46,26 +46,35 @@ body {
 
 
 .topnav {
- 
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
-  padding: 14px 90px;
-  text-decoration: none;
-  font-size: 17px;
+  text-decoration: underline;
+  text-decoration-color: #adadad;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  text-decoration-color: black;
 }
 
 .topnav a.active {
   
-  color: white;
+}
+
+.topnav_separator {
+  display: block;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: black;
+  border: 0;
+  border-bottom: 1px solid;
+  width: 90%;
 }
 
 .jumbotron-img{
@@ -93,29 +102,30 @@ body {
 }
 
 .content_main{
-  max-height: 69vh;
+  height: 69vh;
   overflow: auto;
 }
 
 .content_footer{
-  background-color: #00bbea ;
+  border-top: 1px solid #adadad;
+  background-color: white ;
   height: 4vh;
 }
 
 .topnav{
+  color: black;
+  text-decoration: underline;
   width: 100%;
   display: block;
-  background-color:  #00bbea;
+  border-radius: 0;
 }
 
 .navbar-top {
     background: #4D5061;
     border-bottom: 4px solid #60B078;
-    color: #FFF;
 }
 
 .text-white{
-    color:#fff;
 }
 
 .navbar-doublerow > .navbar{

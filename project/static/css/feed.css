@@ -5,6 +5,7 @@
 
 .post_template{
 	padding: 10px;
+	padding-bottom: 2px;
 	margin: auto;
 	display: block;
 	color: black;
@@ -35,12 +36,14 @@
 }
 
 .post_preview{
-	word-break: break-all;
+	margin-bottom: 15px;
 	font-size: 16px;
 	height: auto;
-	max-height: 110px;
 	width: 100%;
-	/*background-color: green;*/
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
 }
 
 .post_footer{
@@ -53,6 +56,13 @@
 .post_footer *{
 	display: inline-block;
 	height: 100%;
+}
+
+.post_date_separator{
+	width: 20%;
+	border:0;
+	border-top: 1px solid;
+	border-color: #adadad;
 }
 
 .post_relate{

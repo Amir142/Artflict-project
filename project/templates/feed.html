@@ -21,8 +21,10 @@
       </div>
 
       <div class="artlessfeed post_preview ">
-        {{ post.get_description() }}
+        {{ post.Text }}
       </div>
+
+      <div class="post_date_separator"></div>
 
       <div class="artlessfeed post_footer">
         <div class="artlessfeed post_date">
@@ -39,33 +41,33 @@
 
 {% else %}
 
- {% for post in posts %}
+{% for post in posts %}
 
-    <div class="mainfeed post_template" id="post_no_{{post.id}}" onclick="view_story(this.id)">
-      <div class="mainfeed post_title">
-        {{ post.Title.upper() }}
-      </div>
-
-      <div class="mainfeed post_image">
-        <img src="{{post.ArtURL}}">
-      </div>
-
-      <div class="mainfeed post_preview ">
-        {{ post.get_description() }}
-      </div>
-
-      <div class="mainfeed post_footer">
-        <div class="mainfeed post_date">
-          
-          {{ post.format_date() }}
-        </div>
-        <div class="mainfeed post_relate">
-          <i class="fas fa-heart fa-2x relate_button" id="relate_no_{{post.id}}"></i>
-        </div>
-      </div>
+  <div class="mainfeed post_template" id="post_no_{{post.id}}" onclick="view_story(this.id)">
+    <div class="mainfeed post_title">
+      {{ post.Title.upper() }}
     </div>
 
-  {% endfor %}
+    <div class="mainfeed post_image">
+      <img src="{{post.ArtURL}}">
+    </div>
+
+    <div class="mainfeed post_preview ">
+      {{ post.Text }}
+    </div>
+
+    <div class="mainfeed post_footer">
+      <div class="mainfeed post_date">
+        posted on: 
+        {{ post.format_date() }}
+      </div>
+      <div class="mainfeed post_relate">
+        <i class="fas fa-heart fa-2x relate_button" id="relate_no_{{post.id}}"></i>
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
 
 
 {% endif %}
