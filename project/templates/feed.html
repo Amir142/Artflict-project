@@ -9,67 +9,56 @@
 
 {% block content %}
 
-<div class="post_space">
-
+<div class="row mb-2">
 {% if show and show == 'artless' %}
 
   {% for post in posts %}
 
-    <div class="artlessfeed post_template" id="post_no_{{post.id}}" onclick="view_story(this.id)">
-      <div class="artlessfeed post_title">
-        {{ post.Title.upper() }}
-      </div>
-
-      <div class="artlessfeed post_preview ">
-        {{ post.get_description() }}
-      </div>
-
-      <div class="artlessfeed post_footer">
-        <div class="artlessfeed post_date">
-          posted on
-          {{ post.format_date() }}
+        <div class="col-md-12" id="post_no_{{post.id}}">
+          <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <!--strong class="d-inline-block mb-2 text-primary">World</strong-->
+              <h3 class="mb-0">
+                <a class="text-dark display-4"  " href="#">{{ post.Title.upper() }}</a>
+              </h3>
+              <div class="mb-1 text-muted">{{ post.format_date() }}</div>
+              <p class="card-text mb-auto">{{ post.get_description() }}
+</p>
+              <a href="#">Continue reading</a>
+            </div>
+          </div>
         </div>
-        <div class="artlessfeed post_relate">
-          <i class="fas fa-heart fa-2x relate_button" id="relate_no_{{post.id}}"></i>
-        </div>
-      </div>
-    </div>
-
 {% endfor %}
 
 {% else %}
 
  {% for post in posts %}
 
-    <div class="mainfeed post_template" id="post_no_{{post.id}}" onclick="view_story(this.id)">
-      <div class="mainfeed post_title">
-        {{ post.Title.upper() }}
-      </div>
-
-      <div class="mainfeed post_image">
-        <img src="{{post.ArtURL}}">
-      </div>
-
-      <div class="mainfeed post_preview ">
-        {{ post.get_description() }}
-      </div>
-
-      <div class="mainfeed post_footer">
-        <div class="mainfeed post_date">
-          
-          {{ post.format_date() }}
+        <div class="col-md-12" id="post_no_{{post.id}}">
+          <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <h3 class="mb-0">
+                <a class="text-dark" href="#">{{ post.Title.upper() }}</a>
+              </h3>
+              <div class="mb-1 text-muted">{{ post.format_date() }}
+</div>
+              <p class="card-text mb-auto">{{ post.get_description() }}</p>
+              <a href="#">Continue reading</a>
+              <div class="artlessfeed post_relate">
+                <i class="fas fa-heart fa-2x relate_button" id="relate_no_{{post.id}}"></i>
+              </div>
+            </div>
+            <img src="{{post.ArtURL}}" style="width: 200px; height: 250px;" data-src="holder.js/200x250?theme=thumb" class="card-img-right flex-auto d-none d-lg-block">
+          </div>
         </div>
-        <div class="mainfeed post_relate">
-          <i class="fas fa-heart fa-2x relate_button" id="relate_no_{{post.id}}"></i>
-        </div>
-      </div>
-    </div>
+
 
   {% endfor %}
 
 
 {% endif %}
 
-</div>
+      </div>
+
 
 {% endblock %} 

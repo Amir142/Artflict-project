@@ -48,22 +48,6 @@ body {
     color:blue;
 }
 
-#navbarlogo{
-width: 30%;
-height: 100px;
-float: left;
-padding:10px;
-}
-#avatarpic{
-  width: 100px;
-  height: 100px;
-  float:right;
-  border-radius: 50%;
-  padding: 10px;
-  margin-left: 40px;
-
-}
-
 
 .searchblock{
   width: 40%;
@@ -116,3 +100,4 @@ form.example::after {
 .pos{
     display:inline-block;  
 }
+
