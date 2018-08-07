@@ -26,6 +26,6 @@ class ProfilePicForm(Form):
 	profile_pic_url = StringField('URL', validators = [DataRequired()])
 
 class ProfileBioForm(Form):
-	profile_bio = StringField('Change Bio', validators = [DataRequired()])	    
+	profile_bio = TextAreaField('Change Bio', validators = [DataRequired()])	    
      
 

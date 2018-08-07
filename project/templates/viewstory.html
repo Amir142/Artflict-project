@@ -63,10 +63,7 @@
         </form>
         
       </div>
-       <div class="cover_image_space">
-          <asp:ImageButton ClientIDMode="Static" ID="cover_image" CommandName="image_click"
-              CommandArgument='<%# Eval("StoriID") %>' ClientID='<%# string.Format("cover_image{0}", Eval("StoriID")) %>'
-              ImageURL="Images/Book-icon-black.png" runat="server" CssClass="cover_photo" OnClientClick="GetScrollerPosition();"/>
+       
       <!-- Modal footer --> 
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -76,7 +73,6 @@
   <br><br>
 </div>
         </div>
-     </div>
 
 
 
