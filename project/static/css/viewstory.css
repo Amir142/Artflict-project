@@ -1,3 +1,8 @@
+.vl {
+    border-left: 2px solid #999E9A;
+    height: 150px;
+}
+
 body{
 	font-family:'Avenir LT W01 35 Light', 'Avenir';
 	overflow-x:hidden;
@@ -15,6 +20,7 @@ body{
 	color:black;
 	font-family:  "Avenir", sans-serif;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	padding-left: 10px;
 
 
@@ -64,6 +70,18 @@ span{
 		font-family:'Avenir LT W01 35 Light', 'Avenir';
 
 	margin-left: 10px;
+}
+
+#ill{
+	border: 2px solid #555555;
+	background-color: #999E9A;
+	border-radius: 50px;
+
+
+}
+#btn_text{
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 
