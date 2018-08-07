@@ -1,62 +1,46 @@
 {% extends "layout.html" %}
 
-{% block title %}VIEW STORY{% endblock %}
+{% block title %}View Story{% endblock %}
 
 {% block head %}
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/viewstory.css') }}">
 {% endblock %}
 
 {% block content %}
-
 <div class="post_block">
        <div class="valid_text_space" >
-           <div id="story_title"> {{post.Title}} </div><br><br> 
 <!--Checking if post has picture, which will cancel button-->
            {% if post.ArtURL != None %}
+            <div id="story_title"> {{post.Title}} </div>
            <div class = 'row' id = 'info'>
-        <div class="col-md-9" id="description_block"> {{post.Text}}</div>
-       <div class = "col-md-3">
-              <div class="jumbotron jumbotron-img">
-            <img id = "post_img" src={{post.ArtURL}}></
-         </div>
-         </div>
-       <div class = 'row'>
-        <div class='col-md-4'></div>
-      <div class = col-md-8><a href = "{{url_for('profile', username = user.username)}}">The work of '{{user.displayname}}'</a>
+<div class = "col-md-4">
+            <img class = img.thumbnail id = "post_img" width = '100%', height = '100%' src={{post.ArtURL}}>
 </div>
-      <h1>Artist Notes:</h1>
+          <div class="col-md-8" id="description_block"> {{post.Text}}</div>
+
+</div>
+       <div class = 'row'>
+      <span class = col-md-4><a  id = 'artist_link' href = "{{url_for('profile', username = user.username)}}">Art by @{{user.displayname}}</a></span>
+</div>
+    <p id = 'seperator'>_________________________________________________</p>
+
+<div class = 'row'>
+  <div  id = 'notes_class' class = 'col-md-12'>
+      <p id = 'note_header'>ARTIST'S NOTE</p>
       <p id = 'notes'>{{post.ArtistNotes}}</p>
        </div>
-    
+    </div>
      </div>
+   </div>
           
-           
-           <!--<div class="publish_date_block">
-              <span class="publish_date_text"> Published on:    
-                  {{ post.format_date() }}
-              </span>
-           </div>
-              <div class="vote_block"> 
-                  <asp:ImageButton ClientIDMode="Static" CssClass="vote_button up" ID="upvote" 
-                      ClientID='<%# string.Format("upvote_{0}", Eval("StoriID")) %>' 
-                       runat="server" ImageURL="Images/upvote-grey.png" CommandName="vote_up"
-                       CommandArgument='<%# Eval("StoriID") %>' OnClientClick="GetScrollerPosition();"/> 
- 
-                  
-                  
-              </div>
-          </div>
-          
-        -->
 {% else %}
+        <div id="story_title"> {{post.Title}} </div>
         <div class = 'row'>
-        <div class="col-md-2"></div>
-        <div class="col-md-8" id = "description_block"> {{post.Text}}</div>
-        <div class="col-md-2"></div>
-
+        <div class="col-md-9" id = "description_block"> {{post.Text}}</div>
+      </div>
         <div class = 'row'>
         <div class="col-md-9"></div>
-        <div class="col-md-3"> <button type = 'button' class = 'btn btn-info btn-lg' data-toggle= 'modal' data-target = '#addArt'>ILLUSTRATE THIS STORY</button> 
+        <div class="col-md-3"> <button type = 'button' class = 'btn btn-info btn-lg' data-toggle= 'modal' data-target = '#addArt'>ILLUSTRATE THIS STORY</button></div> 
             <!-- The Modal -->
 <div class="modal" id="addArt">
   <div class="modal-dialog">

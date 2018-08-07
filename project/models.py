@@ -95,6 +95,13 @@ class Post(db.Model):
 
 		return month + " " + day + " " + str(now.year)
 
+<<<<<<< HEAD
+=======
+
+	def get_description(self):
+		return self.Text[:700] + "..."
+
+>>>>>>> 85ad6281d62b1e84fda7a6149e129bd6175152b6
 
 	def __repr__(self):
 		return "post " + str(self.id) + " " + str(self.Title) + " " + str(self.Text)

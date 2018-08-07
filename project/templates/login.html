@@ -15,8 +15,24 @@
 	
 	<style type="text/css">
 			 body{
-			  		background-image: url("../static/pictures/bacpicRed.jpg");
-			  	}
+			  		background-image: url("../static/pictures/loginbg.jpg");
+			  		display: -ms-flexbox;
+			  		display: flex;
+				    flex-wrap: wrap;
+				    justify-content: center;
+				    align-items: center;
+				    padding: 15px;
+				    background-repeat: no-repeat;
+				    background-position: center;
+				    background-size: cover;
+				    position: relative;
+				    z-index: 1;
+					font-family:'Avenir LT W01 35 Light';
+				    font-size: 20px;
+
+								}
+			
+			  	
 	  </style>
 </head>
 <body>
@@ -30,7 +46,7 @@
 
 		<div class="login_page_container">
 			<div class="imgcontainer">
-				<img src="static/pictures/logos/whitelogo.png" alt="logo" id="logo">
+				<img src="static/pictures/logos/blacklogo.png" alt="logo" id="logo">
 			</div>
 
 			<div id="login_container">
@@ -47,17 +63,18 @@
 							<input type="password" name="password" id="login_textbox_password" 
 							class=" login_page_textbox" placeholder="Password">
 
-						<button id="login_submit" class="login_btn" type="submit">Log in</button>
+							<button class="btn4" type="submit">Log in</button>
+							<span id="open_signup_form_span" class="form_switch_span" style="color:rgb(102, 102, 102)">
+							<br>don't have an account?</span>
+							<br>
 					</form>
 
-					<span id="open_signup_form_span" class="form_switch_span">
-						don't have an account?
-					</span>
-					<form class="page_switch_form" action="{{url_for('users.register')}}" method="get">
-						<button class="form_switch_link" type="submit">
-							Sign Up here!
-						</button>
-					</form>
+					
+						<form class="page_switch_form" action="{{url_for('users.register')}}" method="get">
+							<button class="form_switch_link btn4" type="submit">
+								Sign Up here!
+							</button>
+						</form>
 				</center>
 			</div>
 
@@ -89,16 +106,16 @@
 								passwords do not match
 						</span>
 
-						<button id="register_submit" class="login_btn" type="submit">Sign Up</button>
+						<button id="register_submit" class="login_btn btn4" type="submit">Sign Up</button>
 					</form>
 
-					<span id="open_login_form_span" class="form_switch_span">
+					<span id="open_login_form_span" class="form_switch_span" style="color:rgb(102, 102, 102)">
 						Already Have an Account?
 					</span>
 					<form class="page_switch_form" action="{{url_for('users.login')}}" method="get">
-						<button class="form_switch_link" type="submit">
+						<button class="form_switch_link btn4" type="submit"><div class="buttonsignin" style="padding:10px;"">
 							Log In here!
-						</button>
+						</div> </button>
 					</form>
 				</center>
 			</div>

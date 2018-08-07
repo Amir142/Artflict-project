@@ -25,7 +25,7 @@ def add_post():
 			post = Post(current_user.id, title, text)
 			db.session.add(post)
 			db.session.commit()
-			return redirect(url_for("feed"))
+			return redirect(url_for("stories"))
 		else:
 			data = {'err_msg':test_result}
 			return render_template('add_post.html',form = form, data = data)
