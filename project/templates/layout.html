@@ -29,8 +29,8 @@
       {% block head %}
       {% endblock %}
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 <style type="text/css">
@@ -39,54 +39,7 @@ background-image: url("{{ url_for('static', filename='pictures/Backgroundsite.jp
  } 
 </style>
   </head>
-<<<<<<< HEAD
-  <body style='background-image: url("{{ url_for('static', filename='pictures/Backgroundsite.jpg') }}");'>
-
-<div class="content">
-  <div class="top_bar">
-    <div class="logoblock">
-      <img src="{{ url_for('static', filename='pictures/logos/verticallog.png') }}" alt="verticallogo" id="navbarlogo" class="pos">
-      <div class="searchblock pos">
-      <!-- Load icon library -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <!-- The form -->
-        <form class="example pos" action="action_page.php">
-          <input type="text" placeholder="Search" name="search">
-          <button type="submit"><i class="fa fa-search pos"></i></button>
-        </form>
-      </div>
-      <a href = "{{url_for('my_profile')}}""><img src="{{ url_for('static', filename='pictures/avatar.png') }}" alt="anatarpic" id="avatarpic" class="pos"></a>
-   
-    </div>
-
-    <div class="nav navbar-nav topnav navbar">
-      <a  href="{{url_for('feed')}}" class="navblock color-me">Home</a>
-      <a href="{{url_for('stories')}}" class="navblock">Stories</a>
-      <a href="#saved_artist" class="navblock" id="saved_artist">Saved Artist</a>
-      <a href="{{url_for('aboutus')}}" class="navblock">About</a>
-      <a href="{{ url_for('add_post.add_post') }}" class="navblock">Post</a>
-      <a href="{{ url_for('users.logout') }}" class="navblock">Log Out</a>
-    </div>
-  </div>
-
-  <div class="content_main">
-    {% block content %}
-    {% endblock %}
-
-  </div>
-
-  <div class="content_footer">
-    <span class="footer_text">all rights reserved to ArtFlict ltd. violators will be subjected to Nomnom's wrath.</span>
-  </div>
-
-</div>
-  
-
-  
     
-</body>
-=======
   <body>
   <div class="bg">
     <div class="content">
@@ -128,5 +81,4 @@ background-image: url("{{ url_for('static', filename='pictures/Backgroundsite.jp
   </div>
 </body>
 
->>>>>>> 5d8e4abe9d16668437bd11d0be9bdfd2dca3834c
 </html>

@@ -1,7 +1,22 @@
+.vl {
+    border-left: 2px solid #999E9A;
+    height: 450px;
+}
 
+.add_post_container{
+  padding-top: 20px;
+  padding-left: 15px;
+}
 .text{
   	color: black;
 	  }
+
+#btn_text{
+  color:black;
+  text-align: middle;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 #button {
   padding: 5px 55px;
@@ -9,38 +24,34 @@
   text-align: left;
   cursor: pointer;
   outline: none;
-  color: #fff;
-  background-color:black;
+  background-color: #999E9A;
   border: none;
-  border-radius: 25px;
-  box-shadow: 0 9px #999;
+  border-radius: 50px;
 }
 
-#button:hover 
-{background-color: #67300d}
 
-#button:active {
-  background-color: black;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-{
 
-}
+
 #header{
-	font-family: "Montserrat", sans-serif;
+	font-family: "Avenir", sans-serif;
     font-size: 40px;
+    font-weight: lighter;
+    padding-top: 25px;
+    margin-top: 25px;
+    padding-bottom: 25px;
+
 }
  .explain{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Avenir", sans-serif;
  	font-size: 20px;
+  font-weight: lighter;
  }
 
 
 .sub{
 	font-family: "Montserrat", sans-serif;
-	font-size: 35px;
-  color:white;
+	font-size: 20px;
+  color:black;
 }
 .post_textbox { 
  position: center;
@@ -95,4 +106,8 @@
 .btn {
 	margin-bottom: 15px;
 
+}
+
+.user_interface{
+  padding-left: 45px;
 }

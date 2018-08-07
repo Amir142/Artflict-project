@@ -99,6 +99,7 @@ class Post(db.Model):
 
 		return month + " " + day + " " + str(now.year)
 
+
 	def get_description(self):
 		return self.Text[:700] + "..."
 
