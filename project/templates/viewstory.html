@@ -13,7 +13,7 @@
            {% if post.ArtURL != None %}
             <div id="story_title"> {{post.Title}} </div>
            <div class = 'row' id = 'info'>
-<div class = "col-md-3">
+<div class = "col-md-4">
             <img class = img.thumbnail id = "post_img" width = '100%', height = '100%' src={{post.ArtURL}}>
 </div>
           <div class="col-md-8" id="description_block"> {{post.Text}}</div>
@@ -32,18 +32,15 @@
     </div>
      </div>
    </div>
-
           
 {% else %}
         <div id="story_title"> {{post.Title}} </div>
         <div class = 'row'>
-        <div class="col-md-2"></div>
-        <div class="col-md-8" id = "description_block"> {{post.Text}}</div>
-        <div class="col-md-2"></div>
-
+        <div class="col-md-9" id = "description_block"> {{post.Text}}</div>
+      </div>
         <div class = 'row'>
         <div class="col-md-9"></div>
-        <div class="col-md-3"> <button type = 'button' class = 'btn btn-info btn-lg' data-toggle= 'modal' data-target = '#addArt'>ILLUSTRATE THIS STORY</button> 
+        <div class="col-md-3"> <button type = 'button' class = 'btn btn-info btn-lg' data-toggle= 'modal' data-target = '#addArt'>ILLUSTRATE THIS STORY</button></div> 
             <!-- The Modal -->
 <div class="modal" id="addArt">
   <div class="modal-dialog">

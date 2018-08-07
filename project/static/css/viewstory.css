@@ -1,12 +1,13 @@
 body{
-	font-family: "Avenir", "Helvetica", sans-serif;
-	overflow-y:hidden;
+	font-family:'Avenir LT W01 35 Light', 'Avenir';
+	overflow-x:hidden;
 }
 
 .post_block{
 }
 #seperator{
 	text-align: center;
+	color:black;
 }
 
 #story_title{
@@ -21,8 +22,7 @@ body{
 #description_block	{
 	font-family:  "Avenir", sans-serif;
 	color:black;
-	font-size: 20px;
-	overflow: auto;
+	font-size: 16px;
 }
 
 #post_img {
@@ -56,9 +56,13 @@ span{
 
 #note_header{
 	font-size: 24px;
+	font-family:'Avenir LT W01 35 Light', 'Avenir';
+	color: black;
 }
 
 #notes_class{
+		font-family:'Avenir LT W01 35 Light', 'Avenir';
+
 	margin-left: 10px;
 }
 
