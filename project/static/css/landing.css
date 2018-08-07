@@ -8,12 +8,7 @@
     margin-right: auto;
     }
 
-    .p_fonts{
-    	font-style: italic;
-    	color: white;
-    	font-size: 50px;
-    	
-    	    }
+	    }
 	#p1{
 		margin-left: 300px;
 	}
@@ -21,18 +16,26 @@
 		margin-left: 400px; 
 	}
 	#bt1{
-		 margin: 4px 500px;
-		   background-color: gray; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 70px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+		margin: 4px 500px;
+		background-color: gray; /* Green */
+        border: none;
+        border-radius: 25px;
+        color: white;
+        padding: 15px 70px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
 	}
-	#by1:hover {
+	#bt1:hover {
     box-shadow: 0 12 px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    color: white;
+    }
+    .p_fonts{
+         color:white; font-size:50px;
+         text-align: center;
+    }

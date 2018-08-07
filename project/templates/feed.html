@@ -38,7 +38,7 @@
           <div class="card flex-md-row mb-4 shadow-sm h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
               <h3 class="mb-0">
-                <a class="text-dark" href="#">{{ post.Title.upper() }}</a>
+               <strong> <a class="text-dark" href="#">{{ post.Title.upper() }}</a></strong>
               </h3>
               <div class="mb-1 text-muted">{{ post.format_date() }}
 </div>
@@ -48,7 +48,7 @@
                 <i class="fas fa-heart fa-2x relate_button" id="relate_no_{{post.id}}"></i>
               </div>
             </div>
-            <img src="{{post.ArtURL}}" style="width: 200px; height: 250px;" data-src="holder.js/200x250?theme=thumb" class="card-img-right flex-auto d-none d-lg-block">
+            <img src="{{post.ArtURL}}" style="width: 500px; height: 300px;" data-src="holder.js/200x250?theme=thumb" class="card-img-right flex-auto d-none d-lg-block">
           </div>
         </div>
 
