@@ -6,7 +6,7 @@
 <script type="text/javascript" src="{{url_for('static', filename='js/feed.js')}}"></script>
 
 {% endblock %}
-
+{%block title %}Home{% endblock %}
 {% block content %}
 
 <div class="row mb-2">
@@ -24,7 +24,7 @@
               <div class="mb-1 text-muted">{{ post.format_date() }}</div>
               <p class="card-text mb-auto">{{ post.get_description() }}
 </p>
-              <a href="#">Continue reading</a>
+              <a href="{{ url_for('list_detail_stories', post_id = post.id) }}">Continue reading</a>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
               <div class="mb-1 text-muted">{{ post.format_date() }}
 </div>
               <p class="card-text mb-auto">{{ post.get_description() }}</p>
-              <a href="#">Continue reading</a>
+              <a href="{{ url_for('list_detail_stories', post_id = post.id) }}">Continue reading</a>
               <div class="artlessfeed post_relate">
                 <i class="fas fa-heart fa-2x relate_button" id="relate_no_{{post.id}}"></i>
               </div>
