@@ -1,10 +1,11 @@
 .vl {
+  padding-right: 20px;
     border-left: 2px solid #999E9A;
     height: 450px;
 }
 
 .text{
-  font-family:'Avenir LT W01 35 Light';
+  font-family:'Avenir LT W01 35 Light', 'Avenir', sans-serif;
   	color: black;
 	  }
 
@@ -26,19 +27,22 @@
   border-radius: 50px;
 }
 
-
+.title{
+  padding-bottom: 20px;
+}
 
  .explain{
-    font-family: "Avenir", sans-serif;
+    font-family: 'Avenir LT W01 35 Light', 'Avenir', sans-serif;
  	font-size: 20px;
   font-weight: lighter;
  }
 
 
 .sub{
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Avenir LT W01 35 Light', 'Avenir', sans-serif;
 	font-size: 20px;
   color:black;
+  padding-left: 20px;
 }
 .post_textbox { 
  position: center;
@@ -81,6 +85,10 @@
 
 }
 
+#form{
+  padding-top:20px; 
+}
+
 .btn {
 	margin-bottom: 15px;
 
@@ -93,4 +101,9 @@
 .explain{
   font-size: 25px;
   font-weight: lighter;
+}
+
+#header{
+  font-size: 30px;
+  padding-bottom: 20px;
 }
