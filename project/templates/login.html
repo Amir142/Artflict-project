@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>login</title>
+	<title>Login</title>
 	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/login.css') }}">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,9 +15,9 @@
 	<style type="text/css">
 			 body{
 			  		background-image: url("../static/pictures/loginbg.jpg");
-			  		display: -ms-flexbox;
-			  		display: flex;
-				    flex-wrap: wrap;
+			  		flex-wrap: wrap;
+			  		background-repeat: no-repeat;
+			  		background-attachment: fixed;
 				    justify-content: center;
 				    align-items: center;
 				    padding: 15px;
@@ -65,7 +65,7 @@
 							<input type="password" name="password" id="login_textbox_password" 
 							class=" login_page_textbox" placeholder="Password">
 
-							<button class="btn4" type="submit">Log in</button>
+							<button class="" type="submit">Log in</button>
 							<span id="open_signup_form_span" class="form_switch_span" style="color:rgb(102, 102, 102)">
 							<br>don't have an account?</span>
 							<br>
@@ -73,7 +73,7 @@
 
 					
 						<form class="page_switch_form" action="{{url_for('users.register')}}" method="get">
-							<button class="form_switch_link btn4" type="submit">
+							<button class="form_switch_link" type="submit">
 								Sign Up here!
 							</button>
 						</form>
@@ -108,14 +108,14 @@
 								passwords do not match
 						</span>
 
-						<button id="register_submit" class="login_btn btn4" type="submit">Sign Up</button>
+						<button id="register_submit" class="login_btn" type="submit">Sign Up</button>
 					</form>
 
-					<span id="open_login_form_span" class="form_switch_span" style="color:rgb(102, 102, 102)">
+					<span id="open_login_form_span" class="form_switch_span" style="color:rgb(102, 102, 102);">
 						Already Have an Account?
 					</span>
 					<form class="page_switch_form" action="{{url_for('users.login')}}" method="get">
-						<button class="form_switch_link btn4" type="submit"><div class="buttonsignin" style="padding:10px;"">
+						<button class="form_switch_link " type="submit"><div class="buttonsignin" style="color:rgb(102, 102, 102);">
 							Log In here!
 						</div> </button>
 					</form>
