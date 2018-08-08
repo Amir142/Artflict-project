@@ -30,7 +30,7 @@
  display: block;
  margin-left: auto;
  margin-right: auto;
- background: -webkit-linear-gradient(top,rgb(255,255,255,0.89),rgb(255, 217, 179,0.89));
+ background: -webkit-linear-gradient(top,rgb(255,255,255,0.71),rgb(255, 217, 179,0.71));
 }
 .profile-body {
  background-color:transparent;
@@ -119,4 +119,22 @@
 }
 
 .btn4:hover {background-color: #e7e7e7;}
+.bt1{	margin-top: 20px;
+        background-color: rgb(160,160,160,0.89);
+        border: none;
+        border-radius: 25px;
+        color: white;
+        padding: 15px 70px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+	}
+	.bt1:hover {
+    box-shadow: 0 12 px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    color: white;
+    }
 

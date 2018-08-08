@@ -10,13 +10,12 @@
 
 	
 	#bt1{
-		margin: 4px 500px;
-		background-color: gray; /* Green */
+        margin-top: 80px;
+        background-color: gray; /* Green */
         border: none;
         border-radius: 25px;
         color: white;
         padding: 15px 70px;
-        text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
@@ -32,5 +31,4 @@
     .p_fonts{
         color:white;
         font-size:50px;
-   }
-   
+    }

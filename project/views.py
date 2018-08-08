@@ -13,7 +13,7 @@ from project.forms import *
 @login_required
 def feed():
 	posts = Post.query.filter(Post.ArtURL != '').all()
-	return render_template('feed.html', posts=posts)
+	return render_template('feed.html', posts=posts, carousel=True)
 
 
 @app.route('/profile')
