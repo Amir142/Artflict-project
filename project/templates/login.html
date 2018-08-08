@@ -26,7 +26,7 @@
 				    background-size: cover;
 				    position: relative;
 				    z-index: 1;
-					font-family:'Avenir LT W01 35 Light';
+					font-family:'Avenir LT W01 35 Light', 'Avenir', sans-serif;
 				    font-size: 20px;
 
 								}
@@ -65,16 +65,16 @@
 							<input type="password" name="password" id="login_textbox_password" 
 							class=" login_page_textbox" placeholder="Password">
 
-							<button class="bt1" type="submit">Log in</button>
-							<span id="open_signup_form_span" class="form_switch_span" style="color:rgb(102, 102, 102)">
-							<br>Don't have an account?</span>
+
+							<button class="login_btn" type="submit">LOG IN</button>
 							<br>
 					</form>
 
 					
 						<form class="page_switch_form" action="{{url_for('users.register')}}" method="get">
 							<button class="form_switch_link" type="submit">
-								Sign up here!
+
+								<p class = 'switch_link'>Don't Have An Account?</p>
 							</button>
 						</form>
 				</center>
@@ -108,15 +108,14 @@
 								passwords do not match
 						</span>
 
-						<button class="bt1" type="submit">Sign up</button>
+
+						<button id="register_submit" class="login_btn" type="submit">SIGN UP</button>
 					</form>
 
-					<span id="open_login_form_span" class="form_switch_span" style="color:rgb(102, 102, 102);">
-						Already have an account?
-					</span>
-					<form class="page_switch_form" action="{{url_for('users.login')}}" method="get">
+					
+					<form class="page_switch_form switch_link" action="{{url_for('users.login')}}" method="get">
 						<button class="form_switch_link " type="submit"><div class="buttonsignin" style="color:rgb(102, 102, 102);">
-							Log In here!
+							Already Have an account?
 						</div> </button>
 					</form>
 				</center>

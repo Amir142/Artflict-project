@@ -1,9 +1,14 @@
 	
 	  .text{
-	  	color: white;
+
 	  }
 
-	
+p{
+    color: black;
+    font-size: 16px;
+    font-family: 'Avenir LT W01 35 Light', 'Avenir', serif;
+
+}	
 
 
 * {
@@ -32,7 +37,14 @@
 body {
     background-color: #f1f1f1;
     padding: 20px;
-    font-family: serif;
+    
+}
+
+.role{
+    color: black;
+    font-family: 'Avenir LT W01 35 Light', 'Avenir', serif;
+    font-weight: lighter;
+
 }
 
 /* Center website */
@@ -135,4 +147,9 @@ h1 {
     .column1 {
         width: 100%;
     }
+}
+
+.role_heading{
+    font-size: 20px;
+    
 }

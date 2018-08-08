@@ -1,156 +1,156 @@
-{% extends "layout.html" %}
+ {% extends "layout.html" %}
+ 
+ {% block title %}Profile{% endblock %}
+ 
+ {% block css %}
+   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/profile.css') }}">
+ 
+ {% endblock %}
+ 
+ {% block content %}
+  <div class="container">
 
-{% block title %}Profile{% endblock %}
-
-{% block css %}
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/profile.css') }}">
-
-{% endblock %}
-
-{% block content %}
-  <!-- This is my profile -->
-  {% if current_user.id == visited_user.id %}
-    <div class="container">
-    <p>ARTIST PROFILE</p>
-      <div class="row">
-      <div class="col-xs-6 col-md-3">
-            <a data-target = '#changeProfile' data-toggle = 'modal'><img class="profile-img" src="{{visited_user.profile_pic_url}}" alt="avatarpic" ></a>
-        </div>
-        <h1 class=" col-md-8 displayname text"><strong>{{visited_user.displayname}}</strong></h1>
-      </div>
-
-          <div class="row">
-
-               <div class="modal fade" id="changeProfile">
-  <div class="modal-dialog">
-    <div class="modal-content">
-       <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title text">Change your Profile Picture</h4>
-        <button type="button" class="close text" data-dismiss="modal">&times;</button>
-      </div>
-       <!-- Modal body -->
-      <div class="modal-body">
-         <form action="{{ url_for('profile.change_pic') }}" method="post">
-        {{ pic_form.csrf_token }}
-        <p class="text">  {{ pic_form.profile_pic_url(placeholder= "Add URL") }}</p><br><br>
-        <button class="btn btn-sm btn-success text" type="submit">Update</button>
-        </form>
+   <!-- This is my profile -->
+   {% if current_user.id == visited_user.id %}
+     <p>ARTIST PROFILE</p>
+       <div class="row">
+       <div class="col-xs-6 col-md-3">
+             <a data-target = '#changeProfile' data-toggle = 'modal'><img class="profile-img" src="{{visited_user.profile_pic_url}}" alt="avatarpic" ></a>
+         </div>
+         <h1 class=" col-md-8 displayname text"><strong>{{visited_user.displayname}}</strong></h1>
+       </div>
+ 
+           <div class="row">
+ 
+                <div class="modal fade" id="changeProfile">
+   <div class="modal-dialog">
+     <div class="modal-content">
+        <!-- Modal Header -->
+       <div class="modal-header">
+         <h4 class="modal-title text">Change your Profile Picture</h4>
+         <button type="button" class="close text" data-dismiss="modal">&times;</button>
+       </div>
+        <!-- Modal body -->
+       <div class="modal-body">
+          <form action="{{ url_for('profile.change_pic') }}" method="post">
+         {{ pic_form.csrf_token }}
+         <p class="text">  {{ pic_form.profile_pic_url(placeholder= "Add URL") }}</p><br><br>
+         <button class="btn btn-sm btn-success text" type="submit">Update</button>
+         </form>
+         
+       </div>
         
-      </div>
-       
-      <!-- Modal footer --> 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger text" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-               
-
-
-             <div id = 'artist_info'>        
-        <div class="modal fade" id="changeBio">
-  <div class="modal-dialog">
-    <div class="modal-content">
-       <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title text">Edit your Bio</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-       <!-- Modal body -->
+       <!-- Modal footer --> 
+       <div class="modal-footer">
+         <button type="button" class="btn btn-danger text" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
+ </div>
+ 
+                
+ 
+ 
+              <div id = 'artist_info'>        
+         <div class="modal fade" id="changeBio">
+   <div class="modal-dialog">
+     <div class="modal-content">
+        <!-- Modal Header -->
+       <div class="modal-header">
+         <h4 class="modal-title text">Edit your Bio</h4>
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+       </div>
+        <!-- Modal body -->
       <div class="modal-body">
          <form action="{{ url_for('profile.change_bio') }}" method="post">
         {{ bio_form.csrf_token }}
-        <p class="text">Edit</p>   {{ bio_form.profile_bio(placeholder= "Add URL") }}<br><br>
+        <p class="text"></p>   {{ bio_form.profile_bio(placeholder= "Bio") }}<br><br>
         <button class="btn btn-sm btn-success" type="submit">Share</button>
         </form>
         
-      </div>
-       
-      <!-- Modal footer --> 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+       </div>
+        
+       <!-- Modal footer --> 
+       <div class="modal-footer">
+         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
                 
 <div class = 'row'>
         <p class = 'header text col-md-4'> About this Artist</p>
         <a data-toggle= 'modal' data-target = '#changeBio' ><img class = 'img.thumbnail' width = '25' height = '25' src = "../static/pictures/edit-button.jpg"></a>
-
-      </div>
+       </div>
     <div class="row">
-      <div class="col-md-9">
-
-              <p class = 'text' id = 'bio'>{{visited_user.bio}}</p>
-              </div>
-        </div>
-              <div class="gallery">
-              <p id = 'seperator'>______________________________________________________</p>
-              <p class = 'text header'>See {{visited_user.displayname}}'s artwork</p>
-              </div>
-              </div>
-
-        <div class = 'row float-left'>
-        {% for art in art_pieces %}
-        <!--Art Gallery-->
-            <div class="col-md-4">
-              <a href = "{{ url_for('list_detail_stories', post_id = art.id) }}"><img class = 'img.thumbnail gallery_img' width = '80%', height = '200' src='{{art.ArtURL}}'></a>
-            </div>
-            {% endfor %}
-
-          </div>
-      </div>
-      
-    </div>
-
-
-
-
-      <!--Visiting User-->
-      {% else %}
-
-      <div class="container">
-    <p>ARTIST PROFILE</p>
-      <div class="row">
-      <div class="col-xs-6 col-md-3">
-            <img class="profile-img" src="{{visited_user.profile_pic_url}}" alt="avatarpic" >
-        </div>
-        <h1 class=" col-md-8 displayname text"><strong>{{visited_user.displayname}}</strong></h1>
-      </div>
-
-             <div id = 'artist_info'>        
-                
-<div class = 'row'>
-        <p class = 'header text col-md-4'> About this Artist</p>
-      </div>
-    <div class="row">
-      <div class="col-md-9">
-
-              <p class = 'text' id = 'bio'>{{visited_user.bio}}</p>
-              </div>
-        </div>
-              <div class="gallery">
-              <p id = 'seperator'>______________________________________________________</p>
-              <p class = 'text header'>See {{visited_user.displayname}}'s artwork</p>
-              </div>
-              </div>
-
-        <div class = 'row float-left'>
-        {% for art in art_pieces %}
-        <!--Art Gallery-->
-            <div class="col-md-4">
-              <a href = "{{ url_for('list_detail_stories', post_id = art.id) }}"><img class = 'img.thumbnail gallery_img' width = '80%', height = '200' src='{{art.ArtURL}}'></a>
-            </div>
-            {% endfor %}
-
-          </div>
-      </div>
-      
-    </div>
-    {% endif %}
-    {% endblock %}
+       <div class="col-md-9">
+ 
+               <p class = 'text' id = 'bio'>{{visited_user.bio}}</p>
+               </div>
+         </div>
+               <div class="gallery">
+               <p id = 'seperator'>______________________________________________________</p>
+               <p class = 'text header'>See {{visited_user.displayname}}'s artwork</p>
+               </div>
+               </div>
+ 
+         <div class = 'row float-left'>
+         {% for art in art_pieces %}
+         <!--Art Gallery-->
+             <div class="col-md-4">
+               <a href = "{{ url_for('list_detail_stories', post_id = art.id) }}"><img class = 'img.thumbnail gallery_img' width = '80%', height = '200' src='{{art.ArtURL}}'></a>
+             </div>
+             {% endfor %}
+ 
+           </div>
+       </div>
+       
+     </div>
+ 
+ 
+ 
+ 
+       <!--Visiting User-->
+       {% else %}
+ 
+       <div class="container">
+     <p>ARTIST PROFILE</p>
+       <div class="row">
+       <div class="col-xs-6 col-md-3">
+             <img class="profile-img" src="{{visited_user.profile_pic_url}}" alt="avatarpic" >
+         </div>
+         <h1 class=" col-md-8 displayname text"><strong>{{visited_user.displayname}}</strong></h1>
+       </div>
+ 
+              <div id = 'artist_info'>        
+                 
+ <div class = 'row'>
+         <p class = 'header text col-md-4'> About this Artist</p>
+       </div>
+     <div class="row">
+       <div class="col-md-9">
+ 
+               <p class = 'text' id = 'bio'>{{visited_user.bio}}</p>
+               </div>
+         </div>
+               <div class="gallery">
+               <p id = 'seperator'>______________________________________________________</p>
+               <p class = 'text header'>See {{visited_user.displayname}}'s artwork</p>
+               </div>
+               </div>
+ 
+         <div class = 'row float-left'>
+         {% for art in art_pieces %}
+         <!--Art Gallery-->
+             <div class="col-md-4">
+               <a href = "{{ url_for('list_detail_stories', post_id = art.id) }}"><img class = 'img.thumbnail gallery_img' width = '80%', height = '200' src='{{art.ArtURL}}'></a>
+             </div>
+             {% endfor %}
+ 
+           </div>
+       </div>
+       
+     </div>
+     {% endif %}
+     {% endblock %}

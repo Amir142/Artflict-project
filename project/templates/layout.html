@@ -25,9 +25,6 @@
       
       <title>{% block title %}ARTflict{% endblock %}</title>
 
-    
-      {% block head %}
-      {% endblock %}
 
       {% block css %}
       {% endblock %}
@@ -69,13 +66,15 @@ body {
               </form>
               </div>
             </div>
-            <div class="col-4">
-              <a href = "{{url_for('my_profile')}}""><img src="{{ url_for('static', filename='pictures/default-avatar.png') }}" alt="anatarpic" id="avatarpic" class="pos" style="padding:0px; width: 45px; height: 45px;margin-bottom:10px;"></a>
+
+            <div class="col-2">
+              {% if current_user.profile_pic_url==none %}
+              <a href = "{{url_for('my_profile')}}""><img src="{{ url_for('static', filename='pictures/avatar.png') }}" alt="anatarpic" id="avatarpic" class="pos"></a>
+       {% else %}    
+              <a href = "{{url_for('my_profile')}}"><img src= '{{current_user.profile_pic_url}}' alt="anatarpic" id="avatarpic" class="pos" style="padding:0px; width: 45px; height: 45px;margin-bottom:10px;"></a>
+              {% endif %}
             </div>
           </div>
-
-<div class="row"">
-</div>   
 
   <nav class="row navbar navbar-expand-lg navbar-light bg-light" style='clear:left; text-align:center; font-size: 15px;'>
     <div class="col-2"><a class="nav-link" href="{{ url_for('feed') }}">HOME<span class="sr-only">(current)</span></a></div>
@@ -83,9 +82,8 @@ body {
     <div class="col-2"><a class="nav-link nevblock" href="{{ url_for('add_post.add_post') }}">POST</a>
     </div>
     <div class="col-2"><a class="nav-link" href="{{ url_for('aboutus') }}">ABOUT<span class="sr-only">(current)</span></a></div>
-      <div class="col-2"><a class="nav-link nevblock" href="{{ url_for('users.logout') }}">LOGOUT</a>
-
-  </nav> 
+      <div class="col-2"><a class="nav-link nevblock" href="{{ url_for('users.logout') }}">LOGOUT</a></div>
+  </nav>
 
             {% block content %}
             {% endblock %}
