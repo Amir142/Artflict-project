@@ -70,3 +70,9 @@ body{
 .bio-btn{
 	cursor: pointer;
 }
+
+#avatarl
+{
+	height: 10px;
+	width: 10px;
+}
