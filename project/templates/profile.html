@@ -96,7 +96,9 @@
       <div class="modal-body">
          <form action="{{ url_for('profile.change_bio') }}" method="post">
         {{ bio_form.csrf_token }}
+
         <p class="text">Edit</p>   {{ bio_form.profile_bio(placeholder= "Edit Bio") }}<br><br>
+
         <button class="btn btn-sm btn-success" type="submit">Share</button>
         </form>
    <!--     
@@ -143,7 +145,7 @@
                 
 <div class = 'row'>
         <p class = 'header text col-md-4'> About this Artist</p>
-        <a data-toggle= 'modal' data-target = '#changeBio' ><img class = 'img.thumbnail' width = '25' height = '25' src = "../static/pictures/edit-button.jpg"></a>
+        <a data-toggle= 'modal' data-target = '#changeBio' ><img class = 'img.thumbnail bio-btn' width = '25' height = '25' src = "../static/pictures/edit-button.jpg"></a>
 
       </div>
     <div class="row">

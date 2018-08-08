@@ -1,8 +1,8 @@
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/about.css') }}">
 {% extends "layout.html" %}
 {% block title %}About Us {% endblock %}
-{% block head %}
-<!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/about.css') }}"> -->
+{% block css %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/about.css') }}">
 {% endblock%}
 
 
@@ -10,9 +10,9 @@
 {% block content %}
 <!--	<img src="../static/pictures/nlogo.png" alt="Stickman" class="imag">-->
 
-<img src="{{ url_for('static', filename='pictures/nlogo.png') }}" alt="Stickman" class="imag" height="60" width="300">
 	
 	
+<<<<<<< HEAD
 <h1 style="color: black">About ArtFlict</h1><br>
 <br>
 <p style="color: black">   Artflict is a rising startup company created by Y3 in MEET (Middle East Entrepreneurs Of Tomorrow). Our main </p>
@@ -34,24 +34,22 @@
     <p>Ben Levi</p>
   
   </div>
+=======
+<h1 class = 'role'>About ArtFlict</h1><br>
+<br>
+<p>   Artflict is a rising startup company created by Y3 in MEET (Middle East Entrepreneurs Of Tomorrow). Our main </p>
+<p>   aim is to create a more compassionate and tolerate society where are is used more frequently for expression </p>
+<p>   and therapy. We are trying to help people suffering from the Palestinian- Israeli conflict in their daily lives </p>
+<p>   to express themselves in a friendly artistic way. We are a platform in which people express their emotion and artist</p>
+<p>   empathize with their stories by creating related art.</p>
 
-<header>Developers:</header>
-<div class="column">
-    <img src="{{ url_for('static', filename='pictures/naomy.jpg') }}" alt="Snow" style="width:100%">
-    <p>NaomyLevy- Ashkenazy </p>
-  </div><br><br>
-  <div class="column">
-    <img src="{{ url_for('static', filename='pictures/may.jpeg') }}" alt="Forest" style="width:100%">
-    <p>May Raviel</p>
-  </div>
-  </div>
-  	
-</div>
+<h1 class = 'role'>Meet the Team</h1>
+>>>>>>> 774f09ae83c79b1f61c850f06fbb084800c0f88d
+
 -->
-
 <!-- Portfolio Gallery Grid -->
 
- <h1>Project maneger</h1>
+ <h1 class = 'role role_heading'>PROJECT MANAGERS</h1>
 <div class="row">
   <div class="column">
     <div class="content">
@@ -67,12 +65,14 @@
     </div>
 </div>  
   <!--</div>-->
-  <h1>developers:</h1>
+  <h1 class = 'role role_heading'>DEVELOPERS</h1>
   <!--<div class="column1">-->
   	<div class="row1">
-  	<div class="column">
+  	<div class="column1">
     <div class="content1">
+
     <img src="{{ url_for('static', filename='pictures/team/naomy.jpg') }}" alt="naomy" style="width:100%">
+
       <p>Naomy Levy-Ashkenazy</p>
     </div>
     </div>
@@ -86,13 +86,15 @@
 	<div class="column1">
      <div class="content1">
     <img src="{{ url_for('static', filename='pictures/team/amir.jpg') }}" alt="amir" style="width:100%">
+
       <p>Amir Saadi</p>
+
     </div>
     </div>
     </div>
 <!-- END GRID -->
 
-<h1>Designer:</h1>
+<h1 class = 'role role_heading'>DESIGNERS</h1>
 <div class="row1">
 <div class="column1">
 <div class="content1">
@@ -107,7 +109,7 @@
     </div>
     </div>
 </div>
-<h1>Business developers:</h1>
+<h1 class = 'role role_heading'>BUSINESS DEVELOPERS</h1>
 <div class="row1">
 <div class="column1">
 <div class="content1">

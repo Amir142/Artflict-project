@@ -25,9 +25,6 @@
       
       <title>{% block title %}ARTflict{% endblock %}</title>
 
-    
-      {% block head %}
-      {% endblock %}
 
       {% block css %}
       {% endblock %}
@@ -41,7 +38,7 @@ body  {
     background-image: url("{{ url_for('static', filename='pictures/Backgroundsite.jpg') }}");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family:'Avenir LT W01 35 Light';
+    font-family:'Avenir LT W01 35 Light', 'Avenir', serif;
     color: white;
       
       
@@ -68,19 +65,22 @@ body  {
                 </div>
             </div>
             <div class="col-2">
+              {% if current_user.profile_pic_url==none %}
               <a href = "{{url_for('my_profile')}}""><img src="{{ url_for('static', filename='pictures/avatar.png') }}" alt="anatarpic" id="avatarpic" class="pos"></a>
+       {% else%}    
+              <a href = "{{url_for('my_profile')}}"><img src= '{{current_user.profile_pic_url}}' alt="anatarpic" id="avatarpic" class="pos"></a>
             </div>
+            {% endif %}
           </div>
 
 
 
    <nav class="row navbar navbar-expand-lg navbar-light bg-light" style='clear:left; text-align:center; font-size: 20px;'>
-  <div class="col-2"><a class="nav-link" href="{{ url_for('feed') }}">HOME<span class="sr-only">(current)</span></a></div>
-  <div class="col-2"><a class="nav-link nevblock" href="{{ url_for('stories') }}">STORIES</a></div>
-  <div class="col-2"><a class="nav-link nevblock" href="{{ url_for('add_post.add_post') }}">POST</a>
+  <div class="col-3"><a class="nav-link" href="{{ url_for('feed') }}">HOME<span class="sr-only">(current)</span></a></div>
+  <div class="col-3"><a class="nav-link nevblock" href="{{ url_for('stories') }}">STORIES</a></div>
+  <div class="col-3"><a class="nav-link nevblock" href="{{ url_for('add_post.add_post') }}">POST</a>
 </div>
-  <div class="col-2"><a class="nav-link" href="{{ url_for('aboutus') }}">ABOUT<span class="sr-only">(current)</span></a></div>
-    <div class="col-2"><a class="nav-link nevblock" href="{{ url_for('users.logout') }}">LOGOUT</a>
+  <div class="col-3"><a class="nav-link" href="{{ url_for('aboutus') }}">ABOUT<span class="sr-only">(current)</span></a></div>
 
 </nav>    
 
