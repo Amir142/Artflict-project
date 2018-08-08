@@ -23,6 +23,7 @@ body{
 	margin-top: 10px;
 	margin-right:40px;
 	margin-bottom: 20px;
+	cursor: pointer;
 }
 
 
@@ -64,5 +65,8 @@ body{
 }
 
 #seperator{
-	text-align: center;
+}
+
+.bio-btn{
+	cursor: pointer;
 }
