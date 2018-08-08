@@ -8,13 +8,7 @@
     margin-right: auto;
     }
 
-	    }
-	#p1{
-		margin-left: 300px;
-	}
-	#p2{
-		margin-left: 400px; 
-	}
+	
 	#bt1{
 		margin: 4px 500px;
 		background-color: gray; /* Green */
@@ -36,6 +30,7 @@
     color: white;
     }
     .p_fonts{
-         color:white; font-size:50px;
-         text-align: center;
-    }
+        color:white;
+        font-size:50px;
+   }
+   

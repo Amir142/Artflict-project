@@ -8,8 +8,30 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="row mb-2">
+
+  <div id="carouselExampleControls" class="carousel slide container" data-ride="carousel>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{{ url_for('static', filename='pictures/slideshow/11.jpg') }}" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{ url_for('static', filename='pictures/slideshow/22.jpg') }}" alt="First slide" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{ url_for('static', filename='pictures/slideshow/33.jpg') }}" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
 {% if show and show == 'artless' %}
 
   {% for post in posts %}
