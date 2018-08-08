@@ -22,7 +22,7 @@
        <div class = 'row'>
       <span class = col-md-4><a  id = 'artist_link' href = "{{url_for('profile', username = user.username)}}">Art by @{{user.displayname}}</a></span>
 </div>
-    <p id = 'seperator'>_________________________________________________</p>
+    <p id = 'seperator'>_________________________________________________________________________________</p>
 
 <div class = 'row'>
   <div  id = 'notes_class' class = 'col-md-12'>
@@ -57,8 +57,8 @@
       <div class="modal-body">
          <form action="{{ url_for('add_post.add_art', post_id = post.id) }}" method="post">
         {{ form.csrf_token }}
-        <p class="text">URL:</p>   {{ form.art_url(placeholder= "Add URL") }}<br><br>
-        <p>Notes:</p>   {{ form.artist_notes(placeholder= "Add your Notes...") }}<br><br>
+        <p class="text" style="color: black">URL:</p> <p style="color: black"> {{ form.art_url(placeholder= "Add URL") }}</p>
+        <p style="color: black">Notes:</p>  <p style="color: black"> {{ form.artist_notes(placeholder= "Add your Notes...") }}</p>
         <button class="btn btn-sm btn-success" type="submit">Share</button>
         </form>
         

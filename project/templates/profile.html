@@ -96,7 +96,7 @@
       <div class="modal-body">
          <form action="{{ url_for('profile.change_bio') }}" method="post">
         {{ bio_form.csrf_token }}
-        <p class="text">Edit</p>   {{ bio_form.profile_bio(placeholder= "Add URL") }}<br><br>
+        <p class="text">Edit</p>   {{ bio_form.profile_bio(placeholder= "Edit Bio") }}<br><br>
         <button class="btn btn-sm btn-success" type="submit">Share</button>
         </form>
    <!--     
