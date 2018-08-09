@@ -31,4 +31,5 @@ app.register_blueprint(profile_bp)
 # General views
 from . import views
 
+
 db.create_all()

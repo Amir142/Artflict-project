@@ -2,7 +2,7 @@
  
  {% block title %}Profile{% endblock %}
  
- {% block css %}
+ {% block head %}
    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/profile.css') }}">
  
  {% endblock %}
@@ -12,7 +12,6 @@
 
    <!-- This is my profile -->
    {% if current_user.id == visited_user.id %}
-     <p>ARTIST PROFILE</p>
        <div class="row">
        <div class="col-xs-6 col-md-3">
              <a data-target = '#changeProfile' data-toggle = 'modal'><img class="profile-img" src="{{visited_user.profile_pic_url}}" alt="avatarpic" ></a>
