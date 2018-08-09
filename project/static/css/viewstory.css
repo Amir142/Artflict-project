@@ -11,7 +11,6 @@ body{
 .post_block{
 }
 #seperator{
-	text-align: center;
 	color:black;
 }
 
@@ -21,7 +20,6 @@ body{
 	font-family:  'Avenir LT W01 35 Light', 'Avenir', sans-serif;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	padding-left: 10px;
 
 
 }
@@ -29,6 +27,7 @@ body{
 	font-family:  'Avenir LT W01 35 Light', 'Avenir', sans-serif;
 	color:black;
 	font-size: 16px;
+	line-height: 2;
 }
 
 #post_img {
@@ -83,6 +82,5 @@ span{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-
 
 
