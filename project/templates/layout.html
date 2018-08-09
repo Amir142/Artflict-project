@@ -35,7 +35,7 @@
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 <style type="text/css">
 body {
-    background-image: url("{{ url_for('static', filename='pictures/group2.jpg') }}");
+    background-image: url("{{ url_for('static', filename='pictures/backgrounds/Backgroundsite.jpg') }}");
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family:'Avenir LT W01 35 Light', 'Avenir', serif;
@@ -57,24 +57,17 @@ body {
             <div class="col-4">       
                <img src="{{ url_for('static', filename='pictures/logos/verticallog.png') }}" alt="verticallogo" id="navbarlogo" class="pos">
             </div>
-            <div class="col-4">
-              <div class="searchblock pos" style="width:150%; padding:3px; margin-bottom: 5px"">
-            <!-- The form -->
-              <form class="example pos" action="action_page.php">
-                <input type="text" placeholder="Search.." name="search" style="line-height:0.8em">
-                <button type="submit"  style="font-size: 14px"><i class="fa fa-search pos"></i></button>
-              </form>
-              </div>
+            <div class="col-6">
             </div>
 
             <div class="col-2">
               {% if current_user.profile_pic_url==none %}
-              <a href = "{{url_for('my_profile')}}""><img src="{{ url_for('static', filename='pictures/avatar.png') }}" alt="anatarpic" id="avatarpic" class="pos"></a>
-       {% else %}    
-              <a href = "{{url_for('my_profile')}}"><img src= '{{current_user.profile_pic_url}}' alt="anatarpic" id="avatarpic" class="pos" style="padding:0px; width: 45px; height: 45px;margin-bottom:10px;"></a>
+                <a href = "{{url_for('my_profile')}}""><img src="{{ url_for('static', filename='pictures/avatar.png') }}" alt="anatarpic" id="avatarpic" class="pos"></a>
+              {% else %}    
+                <a href = "{{url_for('my_profile')}}"><img src= '{{current_user.profile_pic_url}}' alt="anatarpic" id="avatarpic" class="pos"></a>
               {% endif %}
             </div>
-          </div>
+      </div>
 
   <nav class="row navbar navbar-expand-lg navbar-light bg-light" style='clear:left; text-align:center; font-size: 15px;'>
     <div class="col-2"><a class="nav-link" href="{{ url_for('feed') }}">HOME<span class="sr-only">(current)</span></a></div>

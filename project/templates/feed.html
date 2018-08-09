@@ -8,10 +8,10 @@
 {% endblock %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<div class="row mb-2">
+<div class="row mb-2" style="margin-left:15px;margin-right:15px;">
 {% if carousel %}
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-bottom:10px;">
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="height:300px;">
     <div class="carousel-item active">
       <img class="d-block w-100" src="{{ url_for('static', filename='pictures/slideshow1.jpg') }}" alt="First slide">
     </div>
