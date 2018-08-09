@@ -11,6 +11,7 @@
        <div class="valid_text_space" >
 <!--Checking if post has picture, which will cancel button-->
            {% if post.ArtURL != None %}
+           <div class = 'post'>
             <div id="story_title"> {{post.Title}} </div>
            <div class = 'row' id = 'info'>
 <div class = "col-md-4">
@@ -21,6 +22,7 @@
 </div>
        <div class = 'row'>
       <span class = col-md-4><a  id = 'artist_link' href = "{{url_for('profile', username = user.username)}}">Art by @{{user.displayname}}</a></span>
+</div>
 </div>
     <p id = 'seperator'>_________________________________________________________________________________</p>
 
@@ -34,6 +36,7 @@
    </div>
           
 {% else %}
+<div class = 'story'>
         <div id="story_title"> {{post.Title}} </div>
         <div class = 'row'>
         <div class="vl">
@@ -41,6 +44,7 @@
         <div class="col-md-9" id = "description_block"> {{post.Text}}</div>
       </div>
     </div>
+  </div>
         <div class = 'row'>
         <div class="col-md-9"></div>
         <div class = 'col-md-3'><button class="btn btn-default" type="button" data-toggle= 'modal' data-target = '#addArt' id = 'ill'><p id ='btn_text'>ILLUSTRATE THIS STORY</p></button></div> 

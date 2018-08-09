@@ -81,7 +81,7 @@ def list_detail_stories(post_id):
         post = Post.query.filter_by(id = post_id).first()
         if post.ArtURL:
             artist = User.query.filter_by(id = post.ArtistID).first()
-            return render_template('viewstory.html', post=post, artist = artist, form = form)
+            return render_template('viewstory.html', post=post, user = artist, form = form)
         else:
             return render_template('viewstory.html', post=post, form = form)
 

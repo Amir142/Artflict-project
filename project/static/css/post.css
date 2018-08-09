@@ -1,16 +1,21 @@
+.container{
+  padding-left: 50px;
+}
+
+
 .vl {
   padding-right: 20px;
     border-left: 2px solid #999E9A;
-    height: 450px;
+    height: 300px;
 }
 
 .text{
-  font-family:'Avenir LT W01 35 Light', 'Avenir', sans-serif;
+    font-family:'Avenir LT W01 35 Light', 'Avenir', sans-serif;
   	color: black;
 	  }
 
 #btn_text{
-  color:black;
+  color:white;
   text-align: middle;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -64,10 +69,9 @@
 
  #title{
  border-top: none;
-
  border:none;
  box-sizing: border-box;
- width: 70%;
+ width: 80%;
  padding: 12px 20px;
  border-bottom: 2px solid rgb(242, 242, 242);
  box-sizing: border-box;
@@ -79,9 +83,19 @@
  }
 
 #text{
+  resize: none;
 	height:200px;
-	width:500px;
+	width:170%;
 	color: black;
+  border:none;
+  border-top: none;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  border-bottom: 2px solid rgb(242, 242, 242);
+  box-sizing: border-box;
+  opacity: 0.9;
+  color: black;
+  display: block;
 
 }
 
@@ -90,6 +104,7 @@
 }
 
 .btn {
+  margin-top: 20px;
 	margin-bottom: 15px;
 
 }
@@ -106,4 +121,7 @@
 #header{
   font-size: 30px;
   padding-bottom: 20px;
+  padding-left: 0px;
+  margin-right: 20px;
 }
+
